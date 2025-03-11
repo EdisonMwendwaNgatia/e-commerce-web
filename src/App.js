@@ -29,7 +29,7 @@ const App = () => {
     <CartProvider>
       <Router>
         <Routes>
-          <Route path="/" element={user ? <Dashboard /> : <Navigate to="/login" />} />
+          <Route path="/" element={<Dashboard/>} />
           <Route path="/cart" element={user ? <Cart /> : <Navigate to="/login" />} />
           <Route path="/checkout" element={user ? <Checkout /> : <Navigate to="/login" />} />
           <Route path="/register" element={!user ? <Register /> : <Navigate to="/" />} />
