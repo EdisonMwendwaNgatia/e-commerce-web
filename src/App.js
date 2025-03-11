@@ -34,7 +34,7 @@ const App = () => {
           <Route path="/checkout" element={user ? <Checkout /> : <Navigate to="/login" />} />
           <Route path="/register" element={!user ? <Register /> : <Navigate to="/" />} />
           <Route path="/login" element={!user ? <Login /> : <Navigate to="/" />} />
-          <Route path="/terms" element={user ?<Terms /> : <Navigate to="/Login"/>} />
+          <Route path="/terms" element={<Terms/>} />
         </Routes>
       </Router>
     </CartProvider>
