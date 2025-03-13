@@ -615,7 +615,7 @@ const Checkout = () => {
 
   const handleOrder = () => {
     if (isOrderButtonDisabled) return; // Prevent ordering if conditions are not met
-
+  
     // Save order to Firebase
     const orderRef = push(ref(db, `orders/${user.uid}`));
     set(orderRef, {
@@ -625,31 +625,26 @@ const Checkout = () => {
       userId: user.uid,
       timestamp: Date.now(),
     });
-
-    // Open Gmail with order details
+  
+    // Prepare order details message
     const orderDetails = `
-      Full Name: ${form.fullName}
-      Email: ${form.email}
-      Phone: ${form.phone}
-      Location: ${form.location}
-      Mpesa Confirmation: ${form.mpesaConfirmation}
-      Total Amount: Ksh ${totalAmount}
-      Items:
-      ${cart
-        .map(
-          (item) =>
-            `- ${item.name} (x${item.quantity}) - Ksh ${
-              item.price * item.quantity
-            }`
-        )
-        .join("\n")}
+    *New Order:*
+    *Full Name:* ${form.fullName}
+    *Phone:* ${form.phone}
+    *Location:* ${form.location}
+    *Mpesa Confirmation:* ${form.mpesaConfirmation}
+    *Total Amount:* Ksh ${totalAmount}
+    *Items:*
+    ${cart
+      .map((item) => `- ${item.name} (x${item.quantity}) - Ksh ${item.price * item.quantity}`)
+      .join("\n")}
     `;
-
-    const mailto = `mailto:ryanedinson@gmail.com?subject=New Order&body=${encodeURIComponent(
-      orderDetails
-    )}`;
-    window.location.href = mailto;
+  
+    // Redirect to WhatsApp username link with the message
+    const whatsappUrl = `https://wa.me/tiveeorganicske?text=${encodeURIComponent(orderDetails)}`;
+    window.location.href = whatsappUrl;
   };
+  
 
   return (
     <PageContainer>

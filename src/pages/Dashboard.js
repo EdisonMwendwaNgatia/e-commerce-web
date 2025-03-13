@@ -6,6 +6,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ProductCard from "../components/ProductCard";
 import { useRef } from "react";
+import FloatingWhatsApp from "../components/FloatingWhatsapp";
 
 // Styled Components
 const DashboardContainer = styled.div`
@@ -284,6 +285,7 @@ const Dashboard = () => {
           )}
         </ProductGrid>
       </MainContent>
+      <FloatingWhatsApp/>
 
       <Footer ref={footerRef} />
     </DashboardContainer>

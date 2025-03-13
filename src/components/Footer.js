@@ -140,15 +140,19 @@ const Footer = forwardRef((props, ref) => {
             <FooterTitle>Contact Us</FooterTitle>
             <ContactItem>
               <ContactIcon>📍</ContactIcon>
-              Nairobi, Kenya
+              Nairobi, Starmall 2nd Floor, room B8
             </ContactItem>
             <ContactItem>
               <ContactIcon>📞</ContactIcon>
-              +254 700 000000
+              +254 708 986 101
+            </ContactItem>
+            <ContactItem>
+              <ContactIcon>📞</ContactIcon>
+              +254 740 652 145
             </ContactItem>
             <ContactItem>
               <ContactIcon>✉️</ContactIcon>
-              info@tiveeorganics.com
+              tivee254@gmail.com
             </ContactItem>
           </FooterSection>
         </FooterContent>
