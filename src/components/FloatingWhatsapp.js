@@ -80,8 +80,9 @@ const Tooltip = styled.div`
 
 const FloatingWhatsApp = () => {
   const [showTooltip, setShowTooltip] = useState(false);
-  const phoneNumber = "0740652145";
-  const whatsappLink = `https://wa.me/${phoneNumber}`;
+  const phoneNumber = "740652145"; // Remove the leading 0
+  const whatsappLink = `https://wa.me/254${phoneNumber}`; // Add country code 254
+
 
   return (
     <FloatingContainer>

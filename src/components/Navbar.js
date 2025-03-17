@@ -4,7 +4,7 @@ import { auth } from "../firebase/firebase";
 import styled from "styled-components";
 import { useCart } from "../context/CartContext";
 
-import logoImg from "../images/logo.jpg"; // Adjust path as needed
+import logoImg from "../images/logo.jpeg"; // Adjust path as needed
 
 // Styled Components
 const NavbarContainer = styled.nav`

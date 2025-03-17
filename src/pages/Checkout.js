@@ -5,7 +5,7 @@ import { auth, db } from "../firebase/firebase";
 import { ref, set, push } from "firebase/database";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import logoImg from "../images/logo.jpg"; // Adjust path as needed
+import logoImg from "../images/logo.jpeg"; // Adjust path as needed
 
 // Styled Components
 const PageContainer = styled.div`
@@ -726,11 +726,11 @@ const Checkout = () => {
                 <li>Select "Lipa na M-Pesa".</li>
                 <li>Select "Pay Bill".</li>
                 <li>
-                  Enter Business Number (Paybill Number): Use the number
+                  Enter Business Number (516600): Use the number
                   provided by the business.
                 </li>
                 <li>
-                  Enter Account Number: Use the reference number provided.
+                  Enter Account Number (5973606001): Use the reference number provided.
                 </li>
                 <li>Enter the amount: Ksh {totalAmount}</li>
                 <li>Enter your M-Pesa PIN to authorize the transaction.</li>
